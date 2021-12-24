@@ -15,6 +15,8 @@ class CustomElevatedButton extends StatelessWidget {
     required this.onPressed,
   });
 
+
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -24,7 +26,7 @@ class CustomElevatedButton extends StatelessWidget {
         alignment: Alignment.center,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20.0),
-          color: Colors.blueAccent,
+          color: Colors.green,
         ),
         width: MediaQuery.of(context).size.width * 0.9,
         child: Text(

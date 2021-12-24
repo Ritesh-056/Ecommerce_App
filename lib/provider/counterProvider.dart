@@ -1,11 +1,11 @@
 import 'package:flutter/widgets.dart';
 
 class Counter with ChangeNotifier {
-  int _count = 0;
-  int get count => _count;
+  int count = 0;
+ 
 
   void increment() {
-    _count++;
+    count++;
     notifyListeners();
   }
 }
