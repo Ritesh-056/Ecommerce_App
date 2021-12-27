@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class CustomAlertDialog extends StatelessWidget {
-  
   BuildContext context;
   CustomAlertDialog(this.context);
 
