@@ -16,6 +16,15 @@ const Color textColor = Colors.white;
 Color colorLinear = Color(0xff125038);
 Color blackLinear = Color(0xff000000);
 
+
+//height and width of icon container
+const containerIconHeight = 52.0;
+const containerIconWidth = 52.0;
+
+
+
+
+
 //text item dummy
 Widget text(BuildContext context, String text, Color colors, double mFontSize,
     FontWeight mfontWeight, TextDecoration decoration) {
@@ -31,14 +40,16 @@ Widget text(BuildContext context, String text, Color colors, double mFontSize,
   );
 }
 
+
+
 //flutter toasts
-void flutterToast() {
-  Fluttertoast.showToast(
-      msg: "This is Center Short Toast",
+ flutterToast(String msgToast) {
+   Fluttertoast.showToast(
+      msg: msgToast,
       toastLength: Toast.LENGTH_SHORT,
       gravity: ToastGravity.CENTER,
       timeInSecForIosWeb: 1,
-      backgroundColor: Colors.red,
+      backgroundColor: primaryButtonColor,
       textColor: Colors.white,
       fontSize: 16.0);
 }

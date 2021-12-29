@@ -1,6 +1,7 @@
 import 'package:ecommerce_jenisha/components/custom_buttons.dart';
 import 'package:ecommerce_jenisha/components/custom_text_field.dart';
 import 'package:ecommerce_jenisha/const.dart';
+import 'package:ecommerce_jenisha/screens/signupscreen.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -84,11 +85,12 @@ class LoginScreen extends StatelessWidget {
                       fontSize: 16.0,
                       fontWeight: FontWeight.bold,
                       onPressed: () {
-                        flutterToast();
+                        flutterToast("Button Clicked! Successful");
                       }),
                   SizedBox(
                     height: 26.0,
                   ),
+
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -97,8 +99,12 @@ class LoginScreen extends StatelessWidget {
                       SizedBox(
                         width: 8.0,
                       ),
-                      text(context, "Sign Up here", primaryButtonColor, 14.0,
-                          FontWeight.bold, TextDecoration.underline),
+                      GestureDetector(
+                        onTap: (){
+                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => SignUpScreen()));                        },
+                        child: text(context, "Sign Up here", primaryButtonColor, 14.0,
+                            FontWeight.bold, TextDecoration.underline),
+                      ),
                     ],
                   )
                 ],

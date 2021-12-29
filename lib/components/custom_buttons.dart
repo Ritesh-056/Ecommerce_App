@@ -22,7 +22,9 @@ class CustomElevatedButton extends StatelessWidget {
         height: 50,
         alignment: Alignment.center,
         decoration: new BoxDecoration(
-          borderRadius: BorderRadius.circular(12.5),
+          borderRadius: BorderRadius.all(
+            Radius.circular(10),
+          ),
           color: primaryButtonColor,
         ),
         width: MediaQuery.of(context).size.width * 0.9,
