@@ -86,6 +86,7 @@ class LoginScreen extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                       onPressed: () {
                         flutterToast("Button Clicked! Successful");
+                        Navigator.pushNamed(context, '/home');
                       }),
                   SizedBox(
                     height: 26.0,
@@ -101,7 +102,9 @@ class LoginScreen extends StatelessWidget {
                       ),
                       GestureDetector(
                         onTap: (){
-                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => SignUpScreen()));                        },
+                          // Navigator.of(context).push(MaterialPageRoute(builder: (context) => SignUpScreen()));
+                          Navigator.pushNamed(context,'/sign_up');
+                          },
                         child: text(context, "Sign Up here", primaryButtonColor, 14.0,
                             FontWeight.bold, TextDecoration.underline),
                       ),

@@ -1,4 +1,6 @@
+import 'package:ecommerce_jenisha/screens/home.dart';
 import 'package:ecommerce_jenisha/screens/loginscreen.dart';
+import 'package:ecommerce_jenisha/screens/signupscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'provider/counterProvider.dart';
@@ -19,7 +21,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         backgroundColor: Colors.green,
       ),
-      home: LoginScreen(),
+      initialRoute: '/login',
+      routes: {
+        '/login': (context) => LoginScreen(),
+        '/sign_up': (context) =>SignUpScreen(),
+        '/home' :(context) =>HomeScreen()
+      },
+      // home: LoginScreen(),
     );
   }
 }
