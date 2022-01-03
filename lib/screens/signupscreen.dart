@@ -94,18 +94,13 @@ class SignUpScreen extends StatelessWidget {
                           height: containerIconHeight,
                           width: containerIconWidth,
                           decoration: BoxDecoration(
+                            color: Colors.white,
                             borderRadius: BorderRadius.all(
                               Radius.circular(10),
                             ),
-                            color: Colors.white,
-                            // image: DecorationImage(
-                            //   fit: BoxFit.fill,
-                            //   image: AssetImage(
-                            //     'assets/index.jpeg',
-                            //   ),
-                            // ),
+                            
                           ),
-                          child: Icon(Icons.login_rounded,color: Colors.black,size: 24.83,),
+                           child: Image.asset('assets/apple.png'),
                         ),
                       ),
                       Padding(
@@ -119,7 +114,7 @@ class SignUpScreen extends StatelessWidget {
                             ),
                             color: Colors.white,
                           ),
-                          child: Icon(Icons.facebook_rounded,color: Colors.blue,size: 24.83,),
+                          child: Image.asset('assets/facebook.png'),
                         ),
                       ),
                       Padding(
@@ -133,7 +128,7 @@ class SignUpScreen extends StatelessWidget {
                             ),
                             color: Colors.white,
                           ),
-                          child: Icon(Icons.email_rounded,color: Colors.redAccent,size: 24.83,),
+                          child: Image.asset('assets/google.png'),
                         ),
                       )
                     ],

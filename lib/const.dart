@@ -6,6 +6,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 //button color
 const Color primaryButtonColor = Color(0xff0ACF83);
 
+
 //button text color
 const Color primaryButtonTextColor = Color(0xffFFFFFF);
 
