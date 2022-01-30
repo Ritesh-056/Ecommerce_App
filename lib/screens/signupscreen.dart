@@ -79,6 +79,7 @@ class SignUpScreen extends StatelessWidget {
                       fontSize: 16.0,
                       fontWeight: FontWeight.bold,
                       onPressed: () {
+                        Navigator.pushNamed(context, '/search');
                         flutterToast("Button Clicked! Successful");
                       }),
                   SizedBox(

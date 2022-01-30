@@ -1,5 +1,7 @@
 import 'package:ecommerce_jenisha/screens/home.dart';
 import 'package:ecommerce_jenisha/screens/loginscreen.dart';
+import 'package:ecommerce_jenisha/screens/search.dart';
+import 'package:ecommerce_jenisha/screens/show_product_category.dart';
 import 'package:ecommerce_jenisha/screens/signupscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -21,11 +23,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         backgroundColor: Colors.green,
       ),
-      initialRoute: '/login',
+      initialRoute: '/product_category',
       routes: {
-        '/login': (context) => LoginScreen(),
-        '/sign_up': (context) =>SignUpScreen(),
-        '/home' :(context) =>HomeScreen()
+        '/login'    :  (context) => LoginScreen(),
+        '/sign_up'  :  (context) => SignUpScreen(),
+        '/home'     :  (context) => HomeScreen(),
+        '/search'   :  (context) => SearchItem(),
+        '/product_category' :  (context) => ShowProductCategory()
       },
       // home: LoginScreen(),
     );
