@@ -146,23 +146,21 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Container(
                         child: Row(
                           children: [
-                            Padding(
-                              padding: const EdgeInsets.all(16.0),
-                              child: Container(
-                                child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: text(
-                                      context,
-                                      'Headphone',
-                                      Colors.white,
-                                      14.0,
-                                      FontWeight.normal,
-                                      TextDecoration.none),
-                                ),
-                                decoration: BoxDecoration(
-                                  color: primaryButtonColor,
-                                  borderRadius: BorderRadius.circular(50.0),
-                                ),
+                            Container(
+                              margin: EdgeInsets.only(left: 16.0),
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: text(
+                                    context,
+                                    'Headphone',
+                                    Colors.white,
+                                    14.0,
+                                    FontWeight.normal,
+                                    TextDecoration.none),
+                              ),
+                              decoration: BoxDecoration(
+                                color: primaryButtonColor,
+                                borderRadius: BorderRadius.circular(50.0),
                               ),
                             ),
                             Padding(
@@ -186,7 +184,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                             Padding(
                               padding: const EdgeInsets.symmetric(
-                                  horizontal: 8.0, vertical: 16.0),
+                                  vertical: 16.0),
                               child: Container(
                                 child: Padding(
                                   padding: const EdgeInsets.all(8.0),
@@ -204,8 +202,25 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 8.0, vertical: 16.0),
+                              padding: const EdgeInsets.symmetric(vertical: 16.0),
+                              child: Container(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: text(
+                                      context,
+                                      'Camera',
+                                      Colors.grey,
+                                      14.0,
+                                      FontWeight.normal,
+                                      TextDecoration.none),
+                                ),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(50.0),
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 16.0),
                               child: Container(
                                 child: Padding(
                                   padding: const EdgeInsets.all(8.0),
@@ -454,8 +469,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
-                                      Center(child: Image.asset('assets/speaker.png')),
-                                      SizedBox( width: 32,),
+                                      Center(child: Image.asset('assets/speaker.png' ,height: 125, width: 125,)),
                                       text(context, "TMA-2 HD Wireless", Colors.black, 14.0,
                                           FontWeight.normal, TextDecoration.none),
                                       text(context, "USD 350", Colors.black, 12.0,
@@ -465,29 +479,26 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                               ),
                             ),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                              child: Container(
-                                width: 170,
-                                height:200 ,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.all(Radius.circular(12.0)),
-                                  color: Colors.white,
-                                ),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(16.0),
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Center(child: Image.asset('assets/seth.png')),
-                                      SizedBox( width: 32,),
-                                      text(context, "C02 - Cable", Colors.black, 14.0,
-                                          FontWeight.normal, TextDecoration.none),
-                                      text(context, "USD 25", Colors.black, 12.0,
-                                          FontWeight.bold, TextDecoration.none),
-                                    ],
-                                  ),
+                            Container(
+                              width: 170,
+                              height:200 ,
+                              margin: EdgeInsets.only(left: 16.0),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.all(Radius.circular(12.0)),
+                                color: Colors.white,
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.all(16.0),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Center(child: Image.asset('assets/seth.png' ,height:125,width: 125,)),
+                                    text(context, "C02 - Cable", Colors.black, 14.0,
+                                        FontWeight.normal, TextDecoration.none),
+                                    text(context, "USD 25", Colors.black, 12.0,
+                                        FontWeight.bold, TextDecoration.none),
+                                  ],
                                 ),
                               ),
                             ),
@@ -502,6 +513,13 @@ class _HomeScreenState extends State<HomeScreen> {
           )
         ],
       ),
+          floatingActionButton: FloatingActionButton(
+            backgroundColor: primaryButtonColor,
+            child: Icon(Icons.arrow_forward_ios_sharp, size: 20.0,),
+            onPressed: (){
+              Navigator.pushNamed(context, '/search' );
+            },
+          ),
     ));
   }
 }

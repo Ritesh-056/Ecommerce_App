@@ -115,6 +115,14 @@ class LoginScreen extends StatelessWidget {
             ),
           )
         ]),
+
+        floatingActionButton: FloatingActionButton(
+          backgroundColor: primaryButtonColor,
+          child: Icon(Icons.arrow_forward_ios_sharp, size: 20.0,),
+          onPressed: (){
+             Navigator.pushNamed(context, '/sign_up' );
+          },
+        ),
       ),
     );
   }

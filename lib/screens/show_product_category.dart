@@ -162,6 +162,13 @@ class _ShowProductCategoryState extends State<ShowProductCategory> {
             ], //close of column widget [main widget for wrapping children widgets]
           ),
         ),
+        floatingActionButton: FloatingActionButton(
+          backgroundColor: primaryButtonColor,
+          child: Icon(Icons.arrow_forward_ios_sharp, size: 20.0,),
+          onPressed: (){
+            Navigator.pushNamed(context, '/shopping_list_cart' );
+          },
+        ),
       ),
     );
   }
@@ -214,6 +221,7 @@ class _ShowProductCategoryState extends State<ShowProductCategory> {
                           text(context, '86 Reviews', textColor, 10.0, FontWeight.normal, TextDecoration.none),
                         ],
                       ),
+
                       Icon(
                         Icons.more_vert_outlined,
                         size: iconHeightWidth-4.0,
