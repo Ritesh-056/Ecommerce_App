@@ -6,6 +6,7 @@ import 'package:ecommerce_jenisha/screens/search.dart';
 import 'package:ecommerce_jenisha/screens/shopping_cart.dart';
 import 'package:ecommerce_jenisha/screens/show_product_category.dart';
 import 'package:ecommerce_jenisha/screens/signupscreen.dart';
+import 'package:ecommerce_jenisha/screens/user_profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'provider/counterProvider.dart';
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
         '/product_category' :  (context) => ShowProductCategory(),
         '/shopping_list_cart': (context) => ShoppingListCart(),
         '/cart_item_details' : (context) => CartShoppingItemDetails(),
+        '/user_profile'  : (context)  => UserProfileScreen()
       },
       // home: LoginScreen(),
     );

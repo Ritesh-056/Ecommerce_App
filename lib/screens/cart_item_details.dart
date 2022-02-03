@@ -140,7 +140,16 @@ class CartShoppingItemDetailsState extends State<CartShoppingItemDetails> {
                     )),
               ],
             ),
-          )),
+          ),
+        floatingActionButton: FloatingActionButton(
+        backgroundColor: primaryButtonColor,
+        child: Icon(Icons.arrow_forward_ios_sharp, size: 20.0,),
+        onPressed: (){
+          Navigator.pushNamed(context, '/user_profile' );
+        },
+      ),
+
+      ),
     );
   }
 
@@ -179,5 +188,4 @@ class CartShoppingItemDetailsState extends State<CartShoppingItemDetails> {
       ),
     );
   }
-
 }
