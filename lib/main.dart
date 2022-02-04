@@ -1,4 +1,5 @@
 import 'package:ecommerce_jenisha/const.dart';
+import 'package:ecommerce_jenisha/screens/add_to_cart_overview.dart';
 import 'package:ecommerce_jenisha/screens/cart_item_details.dart';
 import 'package:ecommerce_jenisha/screens/home.dart';
 import 'package:ecommerce_jenisha/screens/loginscreen.dart';
@@ -36,7 +37,8 @@ class MyApp extends StatelessWidget {
         '/product_category' :  (context) => ShowProductCategory(),
         '/shopping_list_cart': (context) => ShoppingListCart(),
         '/cart_item_details' : (context) => CartShoppingItemDetails(),
-        '/user_profile'  : (context)  => UserProfileScreen()
+        '/user_profile'  : (context)  => UserProfileScreen(),
+        '/add_item_card_overview' :(context) => AddToCartItemOverview()
       },
       // home: LoginScreen(),
     );
