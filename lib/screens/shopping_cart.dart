@@ -25,7 +25,7 @@ class _ShoppingListCartState extends State<ShoppingListCart> {
   @override
   Widget build(BuildContext context) {
     edgeInsetsPadding = EdgeInsets.symmetric(horizontal: paddingSize);
-   final  size = MediaQuery.of(context).size;
+    final size = MediaQuery.of(context).size;
 
     return SafeArea(
         child: Scaffold(
@@ -84,8 +84,8 @@ class _ShoppingListCartState extends State<ShoppingListCart> {
               ),
             ),
             Positioned(
-                bottom: sizedBoxHeightWidth*2,
-                child:Padding(
+                bottom: sizedBoxHeightWidth * 2,
+                child: Padding(
                   padding: edgeInsetsPadding,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -95,10 +95,10 @@ class _ShoppingListCartState extends State<ShoppingListCart> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            text(context, 'Total 2 items', Colors.black45, 12.0, FontWeight.bold,
-                                TextDecoration.none),
-                            text(context, 'USD 295', textColor, 14.0, FontWeight.bold,
-                                TextDecoration.none),
+                            text(context, 'Total 2 items', Colors.black45, 12.0,
+                                FontWeight.bold, TextDecoration.none),
+                            text(context, 'USD 295', textColor, 14.0,
+                                FontWeight.bold, TextDecoration.none),
                           ],
                         ),
                       ),
@@ -109,19 +109,20 @@ class _ShoppingListCartState extends State<ShoppingListCart> {
                       ),
                     ],
                   ),
-                )
-            ),
+                )),
           ],
         ),
       ),
-          floatingActionButton: FloatingActionButton(
-            backgroundColor: primaryButtonColor,
-            child: Icon(Icons.arrow_forward_ios_sharp, size: 20.0,),
-            onPressed: (){
-              Navigator.pushNamed(context, '/cart_item_details' );
-            },
-          ),
-
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: primaryButtonColor,
+        child: Icon(
+          Icons.arrow_forward_ios_sharp,
+          size: 20.0,
+        ),
+        onPressed: () {
+          Navigator.pushNamed(context, '/cart_item_details');
+        },
+      ),
     ));
   }
 }
@@ -231,7 +232,3 @@ class BoxBorderContainer extends StatelessWidget {
     );
   }
 }
-
-
-
-

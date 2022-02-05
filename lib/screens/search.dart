@@ -67,7 +67,8 @@ class _SearchItemState extends State<SearchItem> {
                       ),
                     ),
                     child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 16.0, vertical: 8.0),
                       child: Row(
                         children: [
                           Icon(Icons.search, color: Colors.grey, size: 20.0),
@@ -87,8 +88,8 @@ class _SearchItemState extends State<SearchItem> {
                 ),
 
                 //starting of latest search containers
-                text(context, 'Latest search', textColor, 16.0, FontWeight.normal,
-                    TextDecoration.none),
+                text(context, 'Latest search', textColor, 16.0,
+                    FontWeight.normal, TextDecoration.none),
                 SizedBox(
                   height: sizedBoxHeight / 2,
                 ),
@@ -122,43 +123,44 @@ class _SearchItemState extends State<SearchItem> {
                 ),
 
                 //start of popular products container
-                text(context, 'Popular product', textColor, 16, FontWeight.normal,
-                    TextDecoration.none),
+                text(context, 'Popular product', textColor, 16,
+                    FontWeight.normal, TextDecoration.none),
                 SizedBox(
-                  height: sizedBoxHeight ,
+                  height: sizedBoxHeight,
                 ),
                 Column(
                   children: [
                     customPopularProductsItems('TMA-2 Comfort Wireless '),
                     SizedBox(
-                      height: sizedBoxHeight +8 ,
+                      height: sizedBoxHeight + 8,
                     ),
                     customPopularProductsItems('TMA-2 DJ '),
                     SizedBox(
-                      height: sizedBoxHeight +8,
+                      height: sizedBoxHeight + 8,
                     ),
                     customPopularProductsItems('TMA-2 Move Wireless '),
                   ],
                 )
-
               ], //close of column widget [main widget for wrapping children widgets]
             ),
           ),
         ),
         floatingActionButton: FloatingActionButton(
           backgroundColor: primaryButtonColor,
-          child: Icon(Icons.arrow_forward_ios_sharp, size: 20.0,),
-          onPressed: (){
-            Navigator.pushNamed(context, '/product_category' );
+          child: Icon(
+            Icons.arrow_forward_ios_sharp,
+            size: 20.0,
+          ),
+          onPressed: () {
+            Navigator.pushNamed(context, '/product_category');
           },
         ),
       ),
     );
   }
 
-
-  customPopularProductsItems(String productName){
-   return Container(
+  customPopularProductsItems(String productName) {
+    return Container(
       width: MediaQuery.of(context).size.width,
       child: Row(
         children: [
@@ -175,7 +177,9 @@ class _SearchItemState extends State<SearchItem> {
               ),
             ),
           ),
-          SizedBox(width:16,),
+          SizedBox(
+            width: 16,
+          ),
           Container(
             width: MediaQuery.of(context).size.width - 150,
             child: Column(
@@ -183,30 +187,43 @@ class _SearchItemState extends State<SearchItem> {
               children: [
                 text(context, productName, textColor, 16.0, FontWeight.normal,
                     TextDecoration.none),
-                SizedBox(height: 8.0,),
+                SizedBox(
+                  height: 8.0,
+                ),
                 text(context, 'USD 270', textColor, 14.0, FontWeight.bold,
                     TextDecoration.none),
-                SizedBox(height: sizedBoxHeight/2,),
+                SizedBox(
+                  height: sizedBoxHeight / 2,
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Row(
                       children: [
-                        Icon(Icons.star_rate, color:Color(0xbbEAAA00), size: 16.0,),
-                        SizedBox(width: 4,),
-                        text(context, '4.6', textColor, 12.0, FontWeight.normal, TextDecoration.none),
-                        SizedBox(width: 16,),
-                        text(context, '86 Reviews', textColor, 12.0, FontWeight.normal, TextDecoration.none),
+                        Icon(
+                          Icons.star_rate,
+                          color: Color(0xbbEAAA00),
+                          size: 16.0,
+                        ),
+                        SizedBox(
+                          width: 4,
+                        ),
+                        text(context, '4.6', textColor, 12.0, FontWeight.normal,
+                            TextDecoration.none),
+                        SizedBox(
+                          width: 16,
+                        ),
+                        text(context, '86 Reviews', textColor, 12.0,
+                            FontWeight.normal, TextDecoration.none),
                       ],
                     ),
                     Icon(
                       Icons.more_vert_outlined,
-                      size: iconHeightWidth-4.0,
+                      size: iconHeightWidth - 4.0,
                       color: iconColor,
                     ),
                   ],
                 )
-
               ],
             ),
           )

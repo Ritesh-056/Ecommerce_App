@@ -1,7 +1,6 @@
 import 'package:ecommerce_jenisha/const.dart';
 import 'package:flutter/material.dart';
 
-
 class ShowProductCategory extends StatefulWidget {
   const ShowProductCategory({Key? key}) : super(key: key);
 
@@ -10,11 +9,13 @@ class ShowProductCategory extends StatefulWidget {
 }
 
 class _ShowProductCategoryState extends State<ShowProductCategory> {
+  double sizedBoxHeight = 16.0;
 
-  double sizedBoxHeight = 16.0 ;
-  Color textColor = Colors.black ;
-  double iconHeightWidth = 24.0 ;
-  Color iconColor = Colors.black ;
+  Color textColor = Colors.black;
+
+  double iconHeightWidth = 24.0;
+
+  Color iconColor = Colors.black;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +29,6 @@ class _ShowProductCategoryState extends State<ShowProductCategory> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Column(
@@ -56,12 +56,12 @@ class _ShowProductCategoryState extends State<ShowProductCategory> {
                     SizedBox(
                       height: sizedBoxHeight,
                     ),
-                    text(context, "Headphone",textColor, 16.0,
+                    text(context, "Headphone", textColor, 16.0,
                         FontWeight.normal, TextDecoration.none),
                     SizedBox(
-                      height: sizedBoxHeight/2,
+                      height: sizedBoxHeight / 2,
                     ),
-                    text(context, "TMA Wireless",textColor, 24.0,
+                    text(context, "TMA Wireless", textColor, 24.0,
                         FontWeight.bold, TextDecoration.none),
                     SizedBox(
                       height: sizedBoxHeight,
@@ -81,34 +81,48 @@ class _ShowProductCategoryState extends State<ShowProductCategory> {
                               ),
                             ),
                             child: Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 8.0),
                               child: Row(
                                 children: [
-                                  SizedBox(width:8,),
-                                  Image.asset('assets/sliders.png', height:20, width: 20,),
-                                  SizedBox(width:8,),
+                                  SizedBox(
+                                    width: 8,
+                                  ),
+                                  Image.asset(
+                                    'assets/sliders.png',
+                                    height: 20,
+                                    width: 20,
+                                  ),
+                                  SizedBox(
+                                    width: 8,
+                                  ),
                                   text(context, "Filter", textColor, 14.0,
                                       FontWeight.normal, TextDecoration.none),
                                 ],
                               ),
                             ),
                           ),
-                          SizedBox(width: 16,),
+                          SizedBox(
+                            width: 16,
+                          ),
                           text(context, "Popularity", textColor, 14.0,
                               FontWeight.normal, TextDecoration.none),
-                          SizedBox(width: 16,),
+                          SizedBox(
+                            width: 16,
+                          ),
                           text(context, "Newest", textColor, 14.0,
                               FontWeight.normal, TextDecoration.none),
-                          SizedBox(width: 16,),
+                          SizedBox(
+                            width: 16,
+                          ),
                           text(context, "Most Expensive", textColor, 14.0,
                               FontWeight.normal, TextDecoration.none),
                         ],
                       ),
                     ),
                     SizedBox(
-                      height: sizedBoxHeight ,
+                      height: sizedBoxHeight,
                     ),
-
                   ],
                 ),
               ),
@@ -116,7 +130,9 @@ class _ShowProductCategoryState extends State<ShowProductCategory> {
               Container(
                 height: MediaQuery.of(context).size.height,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.horizontal(left: Radius.circular(25.0),right: Radius.circular(25.0)),
+                  borderRadius: BorderRadius.horizontal(
+                      left: Radius.circular(25.0),
+                      right: Radius.circular(25.0)),
                   color: Colors.grey.shade300,
                 ),
                 child: Padding(
@@ -124,56 +140,67 @@ class _ShowProductCategoryState extends State<ShowProductCategory> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      SizedBox(height: 16,),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            customPopularProductsItems('TMA-2 HD Wireless '),
-                            SizedBox(width: sizedBoxHeight,),
-                            customPopularProductsItems('TMA-2 HD Wireless'),
-
-                          ],
-                        ),
-                      SizedBox(height: sizedBoxHeight,),
+                      SizedBox(
+                        height: 16,
+                      ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           customPopularProductsItems('TMA-2 HD Wireless '),
-                          SizedBox(width: sizedBoxHeight,),
+                          SizedBox(
+                            width: sizedBoxHeight,
+                          ),
                           customPopularProductsItems('TMA-2 HD Wireless'),
-
                         ],
                       ),
-                      SizedBox(height: sizedBoxHeight,),
+                      SizedBox(
+                        height: sizedBoxHeight,
+                      ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           customPopularProductsItems('TMA-2 HD Wireless '),
-                          SizedBox(width: sizedBoxHeight,),
+                          SizedBox(
+                            width: sizedBoxHeight,
+                          ),
                           customPopularProductsItems('TMA-2 HD Wireless'),
-
+                        ],
+                      ),
+                      SizedBox(
+                        height: sizedBoxHeight,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          customPopularProductsItems('TMA-2 HD Wireless '),
+                          SizedBox(
+                            width: sizedBoxHeight,
+                          ),
+                          customPopularProductsItems('TMA-2 HD Wireless'),
                         ],
                       )
                     ],
                   ),
                 ),
               ),
-
             ], //close of column widget [main widget for wrapping children widgets]
           ),
         ),
         floatingActionButton: FloatingActionButton(
           backgroundColor: primaryButtonColor,
-          child: Icon(Icons.arrow_forward_ios_sharp, size: 20.0,),
-          onPressed: (){
-            Navigator.pushNamed(context, '/shopping_list_cart' );
+          child: Icon(
+            Icons.arrow_forward_ios_sharp,
+            size: 20.0,
+          ),
+          onPressed: () {
+            Navigator.pushNamed(context, '/shopping_list_cart');
           },
         ),
       ),
     );
   }
 
-  customPopularProductsItems(String productName){
+  customPopularProductsItems(String productName) {
     return Container(
       width: 165,
       height: 243,
@@ -196,7 +223,9 @@ class _ShowProductCategoryState extends State<ShowProductCategory> {
                 ),
               ),
             ),
-            SizedBox(width:16,),
+            SizedBox(
+              width: 16,
+            ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Column(
@@ -205,31 +234,43 @@ class _ShowProductCategoryState extends State<ShowProductCategory> {
                 children: [
                   text(context, productName, textColor, 14.0, FontWeight.normal,
                       TextDecoration.none),
-                  SizedBox(height: 8.0,),
+                  SizedBox(
+                    height: 8.0,
+                  ),
                   text(context, 'USD 350', textColor, 12.0, FontWeight.bold,
                       TextDecoration.none),
-                  SizedBox(height: sizedBoxHeight/2,),
+                  SizedBox(
+                    height: sizedBoxHeight / 2,
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Row(
                         children: [
-                          Icon(Icons.star_rate, color: Color(0xbbEAAA00), size: 16.0,),
-                          SizedBox(width: 4,),
-                          text(context, '4.6', textColor, 10.0, FontWeight.normal, TextDecoration.none),
-                          SizedBox(width: 8,),
-                          text(context, '86 Reviews', textColor, 10.0, FontWeight.normal, TextDecoration.none),
+                          Icon(
+                            Icons.star_rate,
+                            color: Color(0xbbEAAA00),
+                            size: 16.0,
+                          ),
+                          SizedBox(
+                            width: 4,
+                          ),
+                          text(context, '4.6', textColor, 10.0,
+                              FontWeight.normal, TextDecoration.none),
+                          SizedBox(
+                            width: 8,
+                          ),
+                          text(context, '86 Reviews', textColor, 10.0,
+                              FontWeight.normal, TextDecoration.none),
                         ],
                       ),
-
                       Icon(
                         Icons.more_vert_outlined,
-                        size: iconHeightWidth-4.0,
+                        size: iconHeightWidth - 4.0,
                         color: iconColor,
                       ),
                     ],
                   )
-
                 ],
               ),
             )
@@ -239,8 +280,3 @@ class _ShowProductCategoryState extends State<ShowProductCategory> {
     );
   }
 }
-
-
-
-
-

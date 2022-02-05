@@ -18,144 +18,142 @@ class CartShoppingItemDetailsState extends State<CartShoppingItemDetails> {
   late EdgeInsets edgeInsetsPadding;
   final double sizedBoxHeightWidth = 16.0;
 
-
   @override
   Widget build(BuildContext context) {
     edgeInsetsPadding = EdgeInsets.symmetric(horizontal: paddingSize);
     final size = MediaQuery.of(context).size;
     return SafeArea(
       child: Scaffold(
-          backgroundColor: Colors.white,
-          body: Container(
-            height: size.height,
-            width: size.width,
-            child: Stack(
-              children: [
-                SingleChildScrollView(
-                  scrollDirection: Axis.vertical,
-                  physics: ScrollPhysics(),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      addVerticalSpace(sizedBoxHeightWidth),
-                      Padding(
-                        padding: edgeInsetsPadding,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Icon(
-                              Icons.arrow_back_ios,
-                              size: iconHeightWidth,
-                              color: iconColor,
-                            ),
-                            Icon(
-                              Icons.shopping_cart_outlined,
-                              size: iconHeightWidth,
-                              color: iconColor,
-                            ),
-                          ], //close of row for top items
-                        ),
+        backgroundColor: Colors.white,
+        body: Container(
+          height: size.height,
+          width: size.width,
+          child: Stack(
+            children: [
+              SingleChildScrollView(
+                scrollDirection: Axis.vertical,
+                physics: ScrollPhysics(),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    addVerticalSpace(sizedBoxHeightWidth),
+                    Padding(
+                      padding: edgeInsetsPadding,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Icon(
+                            Icons.arrow_back_ios,
+                            size: iconHeightWidth,
+                            color: iconColor,
+                          ),
+                          Icon(
+                            Icons.shopping_cart_outlined,
+                            size: iconHeightWidth,
+                            color: iconColor,
+                          ),
+                        ], //close of row for top items
                       ),
-                      addVerticalSpace(sizedBoxHeightWidth *2),
-                      Padding(
+                    ),
+                    addVerticalSpace(sizedBoxHeightWidth * 2),
+                    Padding(
+                      padding: edgeInsetsPadding,
+                      child: text(context, 'USD 350', primaryButtonColor, 16.0,
+                          FontWeight.bold, TextDecoration.none),
+                    ),
+                    addVerticalSpace(sizedBoxHeightWidth),
+                    Padding(
                         padding: edgeInsetsPadding,
-                        child: text(context, 'USD 350', primaryButtonColor, 16.0,
-                            FontWeight.bold, TextDecoration.none),
-                      ),
-                      addVerticalSpace(sizedBoxHeightWidth),
-                      Padding(
-                        padding: edgeInsetsPadding,
-                        child:Text(
+                        child: Text(
                           'TMA-2 \nHD WIRELESS',
                           style: TextStyle(
                               color: textColor,
                               fontSize: 28.0,
-                              fontWeight:FontWeight.bold,
+                              fontWeight: FontWeight.bold,
                               letterSpacing: 0.2,
-                              fontFamily: "Montserrat"
-                          ),
-                        )
-                      ),
-                      addVerticalSpace(sizedBoxHeightWidth*2),
-                      Padding(
-                        padding: edgeInsetsPadding,
-                        child: SingleChildScrollView(
-                          scrollDirection: Axis.horizontal,
-                          physics: ScrollPhysics(),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: ["Overview", "Features", "Specification"]
-                                .map((values) => textGeneric(values))
-                                .toList(),
-                          ),
-                        ),
-                      ),
-                      addVerticalSpace(sizedBoxHeightWidth-8),
-                      Center(
-
-                        child: Container(
-                          margin: EdgeInsets.only(right: 20.0),
-                          height: 3,
-                          width: 30,
-                          color: primaryButtonColor,
-                        ),
-                      ),
-                      addVerticalSpace(sizedBoxHeightWidth * 2),
-                      Padding(
-                        padding:edgeInsetsPadding,
-                        child: text(context, 'Highly Detailed Audio', textColor, 16.0,
-                            FontWeight.bold, TextDecoration.none),
-                      ),
-                      addVerticalSpace(sizedBoxHeightWidth),
-                      Padding(
-                        padding: edgeInsetsPadding,
-                        child: text(context, longText, textColor, 14.0,
-                            FontWeight.normal, TextDecoration.none),
-                      ),
-                      addVerticalSpace(sizedBoxHeightWidth),
-                      Padding(
-                        padding: edgeInsetsPadding,
-                        child: text(context,longText, textColor, 14.0,
-                            FontWeight.normal, TextDecoration.none),
-                      ),
-                      addVerticalSpace(sizedBoxHeightWidth),
-                      itemDetails('assets/cart_detail_img1.png',
-                          text1_cart_item, text1_body_cart_item),
-                      addVerticalSpace(sizedBoxHeightWidth),
-                      itemDetails('assets/cart_detail_img2.png',
-                          text2_cart_item, text2_body_cart_item),
-                    ],
-                  ),
-                ),
-                Positioned(
-                    bottom: sizedBoxHeightWidth * 2,
-                    child: Container(
+                              fontFamily: "Montserrat"),
+                        )),
+                    addVerticalSpace(sizedBoxHeightWidth * 2),
+                    Padding(
                       padding: edgeInsetsPadding,
-                      child: CustomElevatedButton(
-                          text: 'Add To Cart',
-                          fontSize: 16.0,
-                          fontWeight: FontWeight.bold,
-                          onPressed: () {}),
-                    )),
-              ],
-            ),
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        physics: ScrollPhysics(),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: ["Overview", "Features", "Specification"]
+                              .map((values) => textGeneric(values))
+                              .toList(),
+                        ),
+                      ),
+                    ),
+                    addVerticalSpace(sizedBoxHeightWidth - 8),
+                    Center(
+                      child: Container(
+                        margin: EdgeInsets.only(right: 20.0),
+                        height: 3,
+                        width: 30,
+                        color: primaryButtonColor,
+                      ),
+                    ),
+                    addVerticalSpace(sizedBoxHeightWidth * 2),
+                    Padding(
+                      padding: edgeInsetsPadding,
+                      child: text(context, 'Highly Detailed Audio', textColor,
+                          16.0, FontWeight.bold, TextDecoration.none),
+                    ),
+                    addVerticalSpace(sizedBoxHeightWidth),
+                    Padding(
+                      padding: edgeInsetsPadding,
+                      child: text(context, longText, textColor, 14.0,
+                          FontWeight.normal, TextDecoration.none),
+                    ),
+                    addVerticalSpace(sizedBoxHeightWidth),
+                    Padding(
+                      padding: edgeInsetsPadding,
+                      child: text(context, longText, textColor, 14.0,
+                          FontWeight.normal, TextDecoration.none),
+                    ),
+                    addVerticalSpace(sizedBoxHeightWidth),
+                    itemDetails('assets/cart_detail_img1.png', text1_cart_item,
+                        text1_body_cart_item),
+                    addVerticalSpace(sizedBoxHeightWidth),
+                    itemDetails('assets/cart_detail_img2.png', text2_cart_item,
+                        text2_body_cart_item),
+                  ],
+                ),
+              ),
+              Positioned(
+                  bottom: sizedBoxHeightWidth * 2,
+                  child: Container(
+                    padding: edgeInsetsPadding,
+                    child: CustomElevatedButton(
+                        text: 'Add To Cart',
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.bold,
+                        onPressed: () {}),
+                  )),
+            ],
           ),
+        ),
         floatingActionButton: FloatingActionButton(
-        backgroundColor: primaryButtonColor,
-        child: Icon(Icons.arrow_forward_ios_sharp, size: 20.0,),
-        onPressed: (){
-          Navigator.pushNamed(context, '/user_profile' );
-        },
-      ),
-
+          backgroundColor: primaryButtonColor,
+          child: Icon(
+            Icons.arrow_forward_ios_sharp,
+            size: 20.0,
+          ),
+          onPressed: () {
+            Navigator.pushNamed(context, '/user_profile');
+          },
+        ),
       ),
     );
   }
 
   Widget textGeneric(String strText) {
     return Container(
-      margin: EdgeInsets.only(left: paddingSize*2),
+      margin: EdgeInsets.only(left: paddingSize * 2),
       child: text(context, strText, Colors.black, 16.0, FontWeight.normal,
           TextDecoration.none),
     );

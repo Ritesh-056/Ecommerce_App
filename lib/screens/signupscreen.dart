@@ -22,18 +22,18 @@ class SignUpScreen extends StatelessWidget {
           ),
           Container(
             decoration: BoxDecoration(
-              // color: Colors.green.withOpacity(0.2)
+                // color: Colors.green.withOpacity(0.2)
                 gradient: LinearGradient(
                     begin: FractionalOffset.topCenter,
                     end: FractionalOffset.bottomCenter,
                     colors: [
-                      colorLinear.withOpacity(0.6),
-                      blackLinear.withOpacity(0.5),
-                    ],
+                  colorLinear.withOpacity(0.6),
+                  blackLinear.withOpacity(0.5),
+                ],
                     stops: [
-                      0.0,
-                      1.0
-                    ])),
+                  0.0,
+                  1.0
+                ])),
           ),
           Positioned(
             top: 100,
@@ -99,9 +99,8 @@ class SignUpScreen extends StatelessWidget {
                             borderRadius: BorderRadius.all(
                               Radius.circular(10),
                             ),
-                            
                           ),
-                           child: Image.asset('assets/apple.png'),
+                          child: Image.asset('assets/apple.png'),
                         ),
                       ),
                       Padding(
@@ -146,11 +145,11 @@ class SignUpScreen extends StatelessWidget {
                         width: 8.0,
                       ),
                       GestureDetector(
-                        onTap: (){
+                        onTap: () {
                           Navigator.pop(context);
                         },
-                        child: text(context, "Sign In here", primaryButtonColor, 14.0,
-                            FontWeight.bold, TextDecoration.underline),
+                        child: text(context, "Sign In here", primaryButtonColor,
+                            14.0, FontWeight.bold, TextDecoration.underline),
                       ),
                     ],
                   )
@@ -161,9 +160,12 @@ class SignUpScreen extends StatelessWidget {
         ]),
         floatingActionButton: FloatingActionButton(
           backgroundColor: primaryButtonColor,
-          child: Icon(Icons.arrow_forward_ios_sharp, size: 20.0,),
-          onPressed: (){
-            Navigator.pushNamed(context, '/home' );
+          child: Icon(
+            Icons.arrow_forward_ios_sharp,
+            size: 20.0,
+          ),
+          onPressed: () {
+            Navigator.pushNamed(context, '/home');
           },
         ),
       ),

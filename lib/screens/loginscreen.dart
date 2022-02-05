@@ -91,7 +91,6 @@ class LoginScreen extends StatelessWidget {
                   SizedBox(
                     height: 26.0,
                   ),
-
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -101,12 +100,12 @@ class LoginScreen extends StatelessWidget {
                         width: 8.0,
                       ),
                       GestureDetector(
-                        onTap: (){
+                        onTap: () {
                           // Navigator.of(context).push(MaterialPageRoute(builder: (context) => SignUpScreen()));
-                          Navigator.pushNamed(context,'/sign_up');
-                          },
-                        child: text(context, "Sign Up here", primaryButtonColor, 14.0,
-                            FontWeight.bold, TextDecoration.underline),
+                          Navigator.pushNamed(context, '/sign_up');
+                        },
+                        child: text(context, "Sign Up here", primaryButtonColor,
+                            14.0, FontWeight.bold, TextDecoration.underline),
                       ),
                     ],
                   )
@@ -115,12 +114,14 @@ class LoginScreen extends StatelessWidget {
             ),
           )
         ]),
-
         floatingActionButton: FloatingActionButton(
           backgroundColor: primaryButtonColor,
-          child: Icon(Icons.arrow_forward_ios_sharp, size: 20.0,),
-          onPressed: (){
-             Navigator.pushNamed(context, '/sign_up' );
+          child: Icon(
+            Icons.arrow_forward_ios_sharp,
+            size: 20.0,
+          ),
+          onPressed: () {
+            Navigator.pushNamed(context, '/sign_up');
           },
         ),
       ),
